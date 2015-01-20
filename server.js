@@ -45,7 +45,7 @@ function post (fn) {
         if (req.method !== 'POST') {
             res.statusCode = 400;
             res.end('not a POST\n');
-        }
+        } else
         body(req, res, function (err, pvars) {
             fn(req, res, xtend(pvars, params));
         });
